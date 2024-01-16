@@ -1,0 +1,28 @@
+<h4>Total {{total_tracks}} tracks. </h4>
+
+{% set ns = namespace (track_seperator_counter = 0) %}
+{% set nt = namespace (track_number = 1) %}
+
+{% for item in track_list %}
+  {% if ns.track_seperator_counter == 0 %}
+    <h4>->Track {{nt.track_number}}</h4>
+    <b>Composer: </b>
+  {% elif ns.track_seperator_counter == 1 %}
+    <b>Title: </b>
+  {% elif ns.track_seperator_counter == 2 %}
+    <b>Artist: </b>
+  {% elif ns.track_seperator_counter == 3 %}
+    <b>Album: </b>
+  {% endif %}
+  
+  {{item}} <br/>
+  
+  {% set ns.track_seperator_counter = ns.track_seperator_counter + 1 %}  
+  
+  {% if ns.track_seperator_counter == 4 %}
+    <br/><hr/>
+    {% set nt.track_number = nt.track_number + 1 %}
+    {% set ns.track_seperator_counter =0 %}
+  {% endif %}
+
+{% endfor %}
