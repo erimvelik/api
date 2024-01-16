@@ -22,7 +22,7 @@ def compute(date):
   track_list = []
   
   for job_element in job_elements:
-    if (job_element.contents[0] == ""):
+    if (job_element.contents[0] is None):
       track_list.append("Not Defined")
     else:  
       track_list.append(string.capwords(job_element.contents[0]))
