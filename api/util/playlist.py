@@ -22,8 +22,6 @@ def compute(date):
   track_list = []
   
   for job_element in job_elements:
-    #track_list.append(string.capwords(job_element.contents[0]))
-    track_list.append(job_element.contents[0])
-  
-  
+    track_list.append(string.capwords(job_element.contents[0]))
+    
   return track_list
