@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from bs4 import BeautifulSoup
 import string
-import requests
+from requests import get
 
 from util.playlist import compute
 
