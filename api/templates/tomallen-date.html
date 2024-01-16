@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tom Allen - About Time</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+<p>Welcome to <a href="https://www.cbc.ca/listen/live-radio/1-1044-about-time" target="_blank">Tom Allen - About Time</a> program playlist viewer.</p>  
+<form action = "/tomallen-results" method = "post" enctype="multipart/form-data">
+
+<p>Please select a program date: <input type="text" name='date' id="datepicker">
+   <input type = "submit" value="Send">
+
+</p>
+
+</form>
+
+</body>
+</html>
