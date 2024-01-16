@@ -7,7 +7,7 @@ def compute(date):
 
   URL = "https://www.cbc.ca/listen/live-radio/1-1044-about-time/clip/d" +program_year + program_month + program_day 
 
-  page = requests.get(URL)
+  page = get(URL)
 
   soup = BeautifulSoup(page.content, "html.parser")
 
