@@ -1,3 +1,5 @@
+from requests import get
+
 def compute(date):
   date = date.split('/')
   
