@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-from .playlist import playlist
+from util.playlist import compute
 
 
 app = Flask(__name__)
@@ -12,7 +12,7 @@ def main_tom_allen():
 @app.route('/tomallen-results', methods=['POST'])
 def tom_allen_results():
     if request.method=='POST':
-      track_list = playlist.compute(date=request.form['date'])  
+      track_list = compute(date=request.form['date'])  
       total_tracks = int(len(track_list) / 4)
       
       if (len(track_list) > 0):
