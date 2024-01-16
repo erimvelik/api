@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import string
 from requests import get
 
-from util.playlist import compute 
+from api.util.playlist import compute 
 
 #def compute(date):
 #  date = date.split('/')
